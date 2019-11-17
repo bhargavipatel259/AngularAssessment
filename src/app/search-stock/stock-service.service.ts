@@ -8,19 +8,19 @@ import { Observable } from 'rxjs';
 })
 export class StockServiceService {
 
-  constructor(private StockService: HttpClient) { 
+  constructor(private StockService: HttpClient) {
 
   }
 
-  public getDisplayStocks(): Observable<Stock[]>{
+  public getDisplayStocks(): Observable<Stock[]> {
     return this.StockService.get<Stock[]>
     (`https://my-json-server.typicode.com/techsithgit/json-faker-directory/profiles/`)
   }
 }
 
-export class Stock{
-  id: number
-  name: string
-  age: number
+export class Stock {
+  id: number;
+  name: string;
+  age: number;
 
 }
